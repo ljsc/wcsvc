@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wordcount;
+
+service WordCount {
+    rpc GetStats(Message) returns (MessageStats) {}
+}
+
+message Message {
+    string Text = 1;
+}
+
+message MessageStats {
+    int32 words = 1;
+}
